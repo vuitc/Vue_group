@@ -2,39 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Hiển thị danh sách sản phẩm.
+     *
+     * @return \Illuminate\View\View
      */
     public function index()
     {
-        //
-        return response()->json(Product::all(), 200);
+        $products = Product::all();
+        return response()->json($products);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Lưu sản phẩm mới vào cơ sở dữ liệu.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
             'price' => 'required|numeric',
+            'category' => 'required'
         ]);
-
 
         $product = Product::create($validatedData);
         return response()->json($product, 201);
     }
 
     /**
-     * Display the specified resource.
+     * Hiển thị thông tin của một sản phẩm cụ thể.
+     *
+     * @param  string  $id
+     * @return \Illuminate\Http\Response
      */
     public function show(string $id)
     {
@@ -47,45 +54,45 @@ class ProductController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Cập nhật thông tin của một sản phẩm.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Product $product)
     {
-        // Validate the request data
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
             'price' => 'required|numeric',
+            'category' => 'required',
+            'image' => 'required',
+            'soluongton' => 'required|numeric',
+            'trongluong' => 'required|numeric',
+            'quanlity' => 'required|numeric',
         ]);
 
-
-        // Check if the product was found
         if ($product) {
-            // Update the product with the validated data
             $product->update($validatedData);
-
-
-            // Return the updated product as a JSON response with a 200 HTTP status code
             return response()->json($product, 200);
         } else {
-            // Return a 404 Not Found HTTP status code if the product was not found
             return response()->json(['message' => 'Product not found'], 404);
         }
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Xoá một sản phẩm.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
      */
     public function destroy(Product $product)
     {
-        // Check if the product was found
         if ($product) {
-            // Delete the product
             $product->delete();
-            // Return a 204 No Content HTTP status code
             return response()->json(null, 204);
         } else {
-            // Return a 404 Not Found HTTP status code if the product was not found
             return response()->json(['message' => 'Product not found'], 404);
         }
     }

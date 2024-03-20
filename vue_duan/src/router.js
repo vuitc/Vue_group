@@ -5,6 +5,7 @@ import DetailComponent from './components/Frontend/Detail.vue';
 import EComponent from './components/partition/404.vue';
 import CartComponent from './components/Frontend/Cart.vue';
 import CheckoutComponent from './components/Frontend/Checkout.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 const routes = [
   {
     path: "/",
@@ -42,6 +43,7 @@ const routes = [
     component: CheckoutComponent,
     meta: { public: false }, // Mark this route as private
   },
+  
 
 ];
 
