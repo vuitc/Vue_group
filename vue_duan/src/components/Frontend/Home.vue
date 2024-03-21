@@ -193,11 +193,14 @@
                   >
                     <div class="rounded position-relative fruite-item">
                       <div class="fruite-img">
-                        <img
-                          :src="'img/' + product.image"
-                          class="img-fluid w-100 rounded-top"
-                          alt=""
-                        />
+                        
+                        <router-link  :to="'/detail/' + product.id">
+                          <img
+                            :src="'img/' + product.image"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </router-link>
                       </div>
                       <div
                         class="text-white bg-secondary px-3 py-1 rounded position-absolute"
@@ -257,9 +260,7 @@
                         <h4>{{ product.name }}</h4>
 
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                          <p class="text-dark fs-5 fw-bold mb-0">
-                            {{ product.price }}0đ
-                          </p>
+                          <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}0đ</p>
                           <a
                             href="#"
                             class="btn border border-secondary rounded-pill px-3 text-primary"
@@ -305,9 +306,7 @@
                         <h4>{{ product.name }}</h4>
 
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                          <p class="text-dark fs-5 fw-bold mb-0">
-                            {{ product.price }}0đ
-                          </p>
+                          <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}0đ</p>
                           <a
                             href="#"
                             class="btn border border-secondary rounded-pill px-3 text-primary"
@@ -353,9 +352,7 @@
                         <h4>{{ product.name }}</h4>
 
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                          <p class="text-dark fs-5 fw-bold mb-0">
-                            {{ product.price }}0đ
-                          </p>
+                          <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}0đ</p>
                           <a
                             href="#"
                             class="btn border border-secondary rounded-pill px-3 text-primary"
@@ -401,9 +398,7 @@
                         <h4>{{ product.name }}</h4>
 
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                          <p class="text-dark fs-5 fw-bold mb-0">
-                            {{ product.price }}0đ
-                          </p>
+                          <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}0đ</p>
                           <a
                             href="#"
                             class="btn border border-secondary rounded-pill px-3 text-primary"
@@ -637,9 +632,7 @@
               class="fa fa-quote-right fa-2x text-secondary position-absolute"
               style="bottom: 30px; right: 0"
             ></i>
-            <div class="mb-4 pb-4 border-bottom border-secondary">
-              
-            </div>
+            <div class="mb-4 pb-4 border-bottom border-secondary"></div>
             <div class="d-flex align-items-center flex-nowrap">
               <div class="bg-secondary rounded">
                 <img

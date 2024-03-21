@@ -20,10 +20,11 @@ const routes = [
     meta: { public: false }, // Mark this route as private
   },
   {
-    path: "/detail",
+    path: "/detail/:id",
     name: "DetailComponent",
     component: DetailComponent,
     meta: { public: false }, // Mark this route as private
+    props: true
   },
   {
     path: "/404",

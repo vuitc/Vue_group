@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
+use App\Models\ChiTietHoaDon;
+use App\Models\HoaDon;
+use App\Models\User;
+
 
 class ProductController extends Controller
 {
@@ -12,11 +17,41 @@ class ProductController extends Controller
      *
      * @return \Illuminate\View\View
      */
+    // bảng products
     public function index()
     {
         $products = Product::all();
         return response()->json($products);
     }
+    // bảng dạnh mục
+    public function categories()
+    {
+        $categories = Category::all();
+        return response()->json($categories);
+    }
+    // bảng hóa đơn
+    public function hoadons()
+    {
+        $hoadons = HoaDon::all();
+        return response()->json($hoadons);
+    }
+    // bảng chi tiết hóa đơn
+    public function chitiethoadon($id)
+    {
+        $hoadon = ChiTietHoaDon::find($id);
+        if ($hoadon) {
+            return response()->json($hoadon, 200);
+        } else {
+            return response()->json(['message' => 'Khong tim thay hoa don'], 404);
+        }
+    }
+    // bảng user
+    public function user()
+    {
+        $user = User::all();
+        return response()->json($user);
+    }
+
 
     /**
      * Lưu sản phẩm mới vào cơ sở dữ liệu.
