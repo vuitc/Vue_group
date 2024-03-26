@@ -1,0 +1,300 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "Vegetables"
+        },
+        {
+            "id": "2",
+            "name": "Fruits"
+        },
+        {
+            "id": "3",
+            "name": "Bread"
+        },
+        {
+            "id": "4",
+            "name": "Meat"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Bông Cải Xanh - Súp Lơ Xanh Hữu Cơ (300gr)",
+            "description": "Bông cải xanh hoặc súp lơ xanh là một loại cây thuộc họ cải, có hoa lớn ở đầu, thường được dùng như rau...",
+            "price": "36.00",
+            "category_id": "1",
+            "image": "1.png",
+            "soluongton": "100",
+            "trongluong": "300g",
+            "quanlity": 0
+        },
+        {
+            "id": 2,
+            "name": "Khổ Qua (Khay 300Gr)",
+            "description": "Khổ qua còn có tên gọi khác là mướp đắng. Đây là một thực phẩm thách thức đối với nhiều người...",
+            "price": "29.00",
+            "category_id": "1",
+            "image": "2.png",
+            "soluongton": "100",
+            "trongluong": "300g",
+            "quanlity": 0
+        },
+        {
+            "id": 3,
+            "name": "Súp Lơ Xanh Hữu Cơ (100gr)",
+            "description": "Bông cải xanh hoặc súp lơ xanh là một loại cây thuộc họ cải, có hoa lớn ở đầu, thường được dùng như rau...",
+            "price": "36.00",
+            "category_id": "1",
+            "image": "3.png",
+            "soluongton": "100",
+            "trongluong": "100g",
+            "quanlity": 0
+        },
+        {
+            "id": 4,
+            "name": "Rau Muống Baby (Gói 300Gr)",
+            "description": "Rau muống chứa một lượng lớn vitamin A, C, các chất dinh dưỡng và đặc biệt là hàm lượng chất sắt dồi dào...",
+            "price": "24.00",
+            "category_id": "1",
+            "image": "4.png",
+            "soluongton": "100",
+            "trongluong": "300g",
+            "quanlity": 0
+        },
+        {
+            "id": 5,
+            "name": "Khoai Lang Nhật (Gói 500Gr)",
+            "description": "Khoai lang Nhật là giống khoai nhập khẩu, có vỏ màu tím đẹp mắt. Sản phẩm khi chế biến cho thịt chắc, bùi không quá mềm...",
+            "price": "42.00",
+            "category_id": "1",
+            "image": "5.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 6,
+            "name": "Khoai Tây Hồng (Gói 500Gr)",
+            "description": "Khoai tây rất đa dạng và tốt cho sức khỏe con người với các thành phần quan trọng như Kali, chất xơ, vitamin C...",
+            "price": "45.00",
+            "category_id": "1",
+            "image": "6.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 7,
+            "name": "Cà Rốt Đà Lạt (500Gr)",
+            "description": "Cà rốt là một loại rau củ tốt cho sức khỏe, với độ giòn, vị ngon và chứa rất nhiều beta carotene, chất xơ, vitamin K1, kali...",
+            "price": "36.00",
+            "category_id": "1",
+            "image": "7.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 8,
+            "name": "Đậu Bắp (Khay 300Gr)",
+            "description": "Đậu bắp còn có tên gọi khác là mướp tây, là một loại thực vật có nguồn gốc từ Tây Phi, thường được sử dụng như một loại rau...",
+            "price": "30.00",
+            "category_id": "1",
+            "image": "8.png",
+            "soluongton": "100",
+            "trongluong": "300g",
+            "quanlity": 0
+        },
+        {
+            "id": 9,
+            "name": "Nấm bào ngư xám - 200g",
+            "description": "Nấm bào ngư là nguồn thực phẩm cao cấp được dùng để nấu nhiều món ăn khác nhau như xào, hầm với nhiều thực phẩm khác làm tăng hương vị...",
+            "price": "27.00",
+            "category_id": "2",
+            "image": "9.png",
+            "soluongton": "100",
+            "trongluong": "200g",
+            "quanlity": 0
+        },
+        {
+            "id": 10,
+            "name": "Nấm kim châm trắng - 200g",
+            "description": "Nấm kim châm là một trong những loại nấm có giá trị rất dinh dưỡng cao và rất tốt với một số bệnh như là tăng huyết áp...",
+            "price": "26.00",
+            "category_id": "2",
+            "image": "10.png",
+            "soluongton": "100",
+            "trongluong": "200g",
+            "quanlity": 0
+        },
+        {
+            "id": 11,
+            "name": "Hạnh Nhân Tách Vỏ Mỹ Sấy Chín Nguyên Vị",
+            "description": "Phụ nữ mang thai là đối tượng cần được chú ý bố sung chất dinh dưỡng từ nhiều nguồn. Bên cạnh thịt, cá, trứng, sữa là những loại thực phẩm quen thuộc...",
+            "price": "140.00",
+            "category_id": "2",
+            "image": "11.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 12,
+            "name": "Nhân Hạt Bí Xanh",
+            "description": "Giống như các loại hạt, hạt Bí Xanh là một nguồn cung cấp protein và chất béo không bão hòa tuyệt vời...",
+            "price": "110.00",
+            "category_id": "2",
+            "image": "12.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 13,
+            "name": "Hành Lá (Gói 100Gr)",
+            "description": "Với sản phẩm tươi sống, trọng lượng thực tế có thể chênh lệch khoảng 10%...",
+            "price": "18.00",
+            "category_id": "1",
+            "image": "13.png",
+            "soluongton": "100",
+            "trongluong": "100g",
+            "quanlity": 0
+        },
+        {
+            "id": 14,
+            "name": "Ớt Hiểm Đỏ (Gói 50gr)",
+            "description": "Ớt mang một vị cay đặc trưng, cùng với hành, tỏi, và các loại rau nêm khác trở thành nguyên liệu không thể thiếu trong mỗi món ăn...",
+            "price": "10.00",
+            "category_id": "1",
+            "image": "14.png",
+            "soluongton": "100",
+            "trongluong": "50g",
+            "quanlity": 0
+        },
+        {
+            "id": 15,
+            "name": "Tỏi Lý Sơn Đã Bóc Vỏ (Gói 100Gr)",
+            "description": "Với sản phẩm tươi sống, trọng lượng thực tế có thể chênh lệch khoảng 10%...",
+            "price": "26.00",
+            "category_id": "1",
+            "image": "15.png",
+            "soluongton": "100",
+            "trongluong": "100g",
+            "quanlity": 0
+        },
+        {
+            "id": 16,
+            "name": "Rau tần ô - 500g",
+            "description": "Với sản phẩm tươi sống , trọng lượng thực tế có thể chênh lệch khoảng 10%...",
+            "price": "35.00",
+            "category_id": "1",
+            "image": "16.png",
+            "soluongton": "100",
+            "trongluong": "500g",
+            "quanlity": 0
+        },
+        {
+            "id": 17,
+            "name": "Rong biển ăn liền Bibigo (lốc 3 gói)",
+            "description": "Sản phẩm chế biến đơn giản và còn giàu i-ốt, canxi, vitamin, chất khoáng, chất đạ nên ăn rong biển thường xuyên giúp tăng sức đề kháng...",
+            "price": "35.00",
+            "category_id": "1",
+            "image": "17.png",
+            "soluongton": "100",
+            "trongluong": "350g",
+            "quanlity": 0
+        },
+        {
+            "id": 18,
+            "name": "Há cảo tôm tươi 90gr/3 viên",
+            "description": "HÁ CẢO TÔM TƯƠI là một món Dim Sum truyền thống lâu đời của cộng đồng người Hoa...",
+            "price": "48.00",
+            "category_id": "4",
+            "image": "18.png",
+            "soluongton": "100",
+            "trongluong": "90g",
+            "quanlity": 0
+        },
+        {
+            "id": 19,
+            "name": "Dừa Sấy Giòn Ohla Seavy Hộp 120G",
+            "description": "DỪA SẤY GIÒN VỊ NGUYÊN BẢN\r\n\r\n✓Lựa chọn tuyệt vời cho cho chị em thích ăn vặt không lo tăng cân...",
+            "price": "60.00",
+            "category_id": "4",
+            "image": "19.png",
+            "soluongton": "100",
+            "trongluong": "120g",
+            "quanlity": 0
+        },
+        {
+            "id": 20,
+            "name": "Hoa trang trí ăn được",
+            "description": "Không chỉ giúp làm thư thái tinh thần, một số loại hoa còn có thể ăn được và rất có lợi cho sức khỏe...",
+            "price": "60.00",
+            "category_id": "4",
+            "image": "20.png",
+            "soluongton": "100",
+            "trongluong": "20g",
+            "quanlity": 0
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "User 1",
+            "email": "user1@example.com",
+            "phone": "123456789",
+            "diachi": "123 Street, City",
+            "role": 0
+        },
+        {
+            "id": 2,
+            "name": "User 2",
+            "email": "user2@example.com",
+            "phone": "987654321",
+            "diachi": "456 Avenue, Town",
+            "role": 0
+        },
+        {
+            "id": 3,
+            "name": "Admin",
+            "email": "admin@example.com",
+            "phone": "555555555",
+            "diachi": "789 Road, Village",
+            "role": 1
+        }
+    ],
+    "hoadons": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "total_amount": "120.00",
+            "phone": "123456789",
+            "diachi": "123 Street, City"
+        },
+        {
+            "id": 2,
+            "user_id": 2,
+            "total_amount": "200.00",
+            "phone": "987654321",
+            "diachi": "456 Avenue, Town"
+        }
+    ],
+    "chitiethoadons": [
+        {
+            "id": 1,
+            "hoadon_id": 1,
+            "product_id": 1,
+            "quantity": 2,
+            "price": "36"
+        },
+        {
+            "id": 2,
+            "hoadon_id": 2,
+            "product_id": 5,
+            "quantity": 3,
+            "price": "42.00"
+        }
+    ]
+}
