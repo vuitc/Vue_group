@@ -48,7 +48,7 @@
                                         <ul class="list-unstyled fruite-categorie">
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#" @click="selectedCategory = 'Rau xanh, rau tươi'">
+                                                    <a  @click="selectedCategory = 1">
                                                         <i class="fas fa-apple-alt me-2"></i>
                                                         Rau xanh, rau tươi
                                                     </a>
@@ -57,28 +57,28 @@
                                             </li>
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#" @click="selectedCategory = 'Rau củ quả'"><i
+                                                    <a href="#" @click="selectedCategory = 2"><i
                                                             class="fas fa-apple-alt me-2"></i>Rau củ quả</a>
                                                     <span>(5)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#" @click="selectedCategory = 'Nấm và hạt'"><i
+                                                    <a href="#" @click="selectedCategory = 3"><i
                                                             class="fas fa-apple-alt me-2"></i>Nấm và hạt</a>
                                                     <span>(2)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#" @click="selectedCategory = 'Rau mùi'"><i
+                                                    <a href="#" @click="selectedCategory = 4"><i
                                                             class="fas fa-apple-alt me-2"></i>Rau mùi</a>
                                                     <span>(8)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="d-flex justify-content-between fruite-name">
-                                                    <a href="#" @click="selectedCategory = 'Sản phẩm khác'">
+                                                    <a href="#" @click="selectedCategory = 5">
                                                         <i class="fas fa-apple-alt me-2"></i>Sản phẩm khác</a>
                                                     <span>(5)</span>
                                                 </div>
@@ -204,7 +204,7 @@
                         <div class="col-lg-9">
                             <div class="row g-4 justify-content-center tab-content">
                                 <!-- Tất cả sản phẩm -->
-                                <div class="col-md-6 col-lg-6 col-xl-4" v-for="product in filteredProducts"
+                                <div class="col-md-6 col-lg-6 col-xl-4" v-for="product in products"
                                     :key="product.id">
                                     <div class="rounded position-relative fruite-item">
                                         <router-link :to="'/detail/' + product.id">
@@ -213,43 +213,24 @@
                                                     alt="">
 
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                                style="top: 10px; left: 10px;">{{ product.category }}</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>{{ product.name }}</h4>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}</p>
-                                                    <a href="#"
-                                                        class="btn border border-secondary rounded-pill px-3 text-primary">
-                                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </router-link>
-                                    </div>
-                                </div>
-                                <!--  -->
-                                <!-- <div id="tab-2" class="col-md-6 col-lg-6 col-xl-4" v-for="product in Category2Products"
-                                    :key="product.id">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img :src="'img/' + product.image" class="img-fluid w-100 rounded-top"
-                                                alt="">
-                                        </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                            style="top: 10px; left: 10px;">{{ product.category }}</div>
+                                            style="top: 10px; left: 10px;">{{ product.category_id }}</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                             <h4>{{ product.name }}</h4>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0">{{ product.price }}</p>
-                                                <a href="#"
+                                                <!-- <a href="#"
                                                     class="btn border border-secondary rounded-pill px-3 text-primary">
                                                     <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
-                                                </a>
+                                                </a> -->
+                                                <a style="cursor:pointer" @click="addToCart(product.id); console.log(product.id);">Thêm vào giỏ hàng</a>
+
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
+                                
                                 <div class="col-12">
                                     <div class="pagination d-flex justify-content-center mt-5">
                                         <a href="#" class="rounded">&laquo;</a>
@@ -272,8 +253,7 @@
     <!-- Fruits Shop End-->
 </template>
 
-<script>
-
+<!-- <script>
 
 export default {
     name: "ShopCompoment",
@@ -299,6 +279,10 @@ export default {
                     console.error("Error fetching products:", error);
                 });
         },
+        addToCart(productId) {
+      // Gọi action addToCart từ store và truyền productId của sản phẩm cần thêm vào giỏ hàng
+        this.$store.dispatch('addToCart', productId);
+    }
     },
     computed: {
         filteredProducts() {
@@ -319,6 +303,54 @@ export default {
         }
     }
 };
+</script> -->
+<script>
+    import { mapState,mapGetters } from 'vuex';
+
+export default {
+    name: "ShopCompoment",
+    data() {
+        return {
+            sortingOrder: 'asc',
+            selectedCategory: 1,
+        };
+    },
+    mounted() {
+        // Gọi action fetchProducts từ store để lấy danh sách sản phẩm từ server
+        this.$store.dispatch('fetchProducts');
+    },
+    computed: {
+        // Sử dụng mapState để truy cập dữ liệu từ Vuex store
+        ...mapState(['products']),   
+        ...mapGetters({allProducts:'allProducts',}          
+        )
+    },
+    methods: {
+        addToCart(productId) {
+            // Gọi action addToCart từ store và truyền productId của sản phẩm cần thêm vào giỏ hàng
+            this.$store.dispatch('addToCart', productId);
+        },
+        handleSortChange() {
+            // Logic để xử lý thay đổi sắp xếp
+            // Ví dụ: Nếu sắp xếp là 'asc' thì sắp xếp tăng dần, ngược lại sắp xếp giảm dần
+            if (this.sortingOrder === 'asc') {
+                return this.products.sort((a, b) => a.id - b.id);
+            } else {
+                return this.products.sort((a, b) => b.id - a.id);
+            }
+        },
+        filteredProducts() {
+            if (this.selectedCategory) {
+                const categoryId = parseInt(this.selectedCategory);
+                console.log(categoryId);
+                return this.products.filter(product => product.category_id === categoryId);
+            } else {
+                return this.products;
+            }
+        }
+    }
+};
+
 </script>
 
 <style></style>
