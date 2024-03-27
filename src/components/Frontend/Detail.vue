@@ -759,7 +759,7 @@ export default {
   },
   methods: {
     fetchProduct(productId) {
-      fetch(`http://localhost:3000/products/${productId}`)
+      fetch(`http://127.0.0.1:8000/api/products/${productId}`)
         .then((response) => response.json())
         .then((data) => {
           this.product = data;

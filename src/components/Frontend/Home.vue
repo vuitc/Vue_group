@@ -168,7 +168,7 @@
                 >
                   <span class="text-dark" style="width: 130px">Nấm và hạt</span>
                 </a>
-              </li>0.
+              </li>
               <li class="nav-item">
                 <a
                   class="d-flex m-2 py-2 bg-light rounded-pill"

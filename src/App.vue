@@ -22,7 +22,7 @@ export default {
   computed: {
     // Tạo một computed property để kiểm tra trang hiện tại có phải là AdminDashboard không
     isAdminDashboard() {
-      return this.$route.name === "AdminDashboard" || this.$route.name === "EditProduct";
+      return this.$route.name === "AdminDashboard";
     },
   },
 };
