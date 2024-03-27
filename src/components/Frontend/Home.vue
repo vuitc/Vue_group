@@ -168,7 +168,7 @@
                 >
                   <span class="text-dark" style="width: 130px">Nấm và hạt</span>
                 </a>
-              </li>
+              </li>0.
               <li class="nav-item">
                 <a
                   class="d-flex m-2 py-2 bg-light rounded-pill"
@@ -193,8 +193,7 @@
                   >
                     <div class="rounded position-relative fruite-item">
                       <div class="fruite-img">
-                        
-                        <router-link  :to="'/detail/' + product.id">
+                        <router-link :to="'/detail/' + product.id">
                           <img
                             :src="'img/' + product.image"
                             class="img-fluid w-100 rounded-top"

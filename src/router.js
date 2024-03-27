@@ -5,7 +5,8 @@ import DetailComponent from './components/Frontend/Detail.vue';
 import EComponent from './components/partition/404.vue';
 import CartComponent from './components/Frontend/Cart.vue';
 import CheckoutComponent from './components/Frontend/Checkout.vue';
-import HelloWorld from "./components/HelloWorld.vue";
+import AdminDashboard from './components/Backend/AdminDashboard.vue';
+import EditProduct from './components/Backend/EditProduct.vue';
 const routes = [
   {
     path: "/",
@@ -44,7 +45,17 @@ const routes = [
     component: CheckoutComponent,
     meta: { public: false }, // Mark this route as private
   },
-  
+  {
+    path: "/admin",
+    name: "AdminDashboard",
+    component: AdminDashboard,
+    meta: { public: false }, // Mark this route as private
+  },
+  {
+    path: '/EditProduct/:id/',
+    name: 'EditProduct',
+    component: EditProduct
+  }
 
 ];
 
