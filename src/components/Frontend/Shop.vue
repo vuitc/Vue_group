@@ -253,7 +253,8 @@
     <!-- Fruits Shop End-->
 </template>
 
-<!-- <script>
+<script>
+
 
 export default {
     name: "ShopCompoment",

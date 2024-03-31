@@ -193,8 +193,7 @@
                   >
                     <div class="rounded position-relative fruite-item">
                       <div class="fruite-img">
-                        
-                        <router-link  :to="'/detail/' + product.id">
+                        <router-link :to="'/detail/' + product.id">
                           <img
                             :src="'img/' + product.image"
                             class="img-fluid w-100 rounded-top"
