@@ -754,6 +754,7 @@ export default {
     },
   },
   computed: {
+    
     tab2Products() {
       // Lọc và trả về các sản phẩm có ID từ 1 đến 4
       return this.products.filter((product) => product.id >= 1 && product.id <= 4);
